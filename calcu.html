@@ -1,0 +1,243 @@
+<html>
+  <head>
+    <title>Calculator</title>
+  </head>
+
+  <body style="background: rgb(0, 0, 0)">
+  <center>
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+    <table border = "5" style = "background-color:rgb(91, 91, 116);padding: 10">
+      <tr><th style="border: none">Calculator</th></tr><br>
+      <tr><th><input type="text" id ="input" autofocus style = "color: rgb(1, 18, 54);background-color: rgb(11, 122, 80);width: 250;height: 50;font-size: 25;border:none;padding: 10"></th></tr>
+      <tr>
+        <th style="border: none;padding-top: 5 ">
+          <input type="button" value ="C" id="C" onclick ="C()" style = "color:white;background-color:rgb(180, 49, 44);width: 57;height: 30;border-radius: 30%">
+          <input type="button" value ="/" id="/" onclick ="k()" style = "color: white;background-color:rgb(134, 120, 120);width: 57;height: 30;border-radius: 30%">
+          <input type="button" value ="x" id="x" onclick ="x()" style = "color: white;background-color: rgb(134, 120, 120);width: 57;height: 30;border-radius: 30%">
+          <input type="button" value ="<-" id="<-" onclick= "p()" style = "color: white;background-color:rgb(180, 49, 44);width:57;height: 30;border-radius: 30%">
+        </th>
+      </tr>
+      <tr>
+        <th style="border: none">
+          <input type="button" value ="7" id="g" onclick ="g()" style = "color: black;background-color: rgb(205, 211, 214);width: 57;height: 30;border-radius: 30%">
+          <input type="button" value ="8" id="h" onclick ="h()" style = "color: black;background-color: rgb(205, 211, 214);width: 57;height: 30;border-radius: 30%">
+          <input type="button" value ="9" id="9" onclick ="i()" style = "color: black;background-color: rgb(205, 211, 214);width: 57;height: 30;border-radius: 30%">
+          <input type="button" value ="-" id="-" onclick ="m()" style = "color: white;background-color: rgb(134, 120, 120);width: 57;height: 30;border-radius: 30%">
+        </th>
+      </tr>
+      <br>
+      <tr>
+        <th style="border: none">
+            <input type="button" value ="4" id="4" onclick ="d()" style = "color: black;background-color: rgb(205, 211, 214);width: 57;height: 30;border-radius: 30%">
+            <input type="button" value ="5" id="5" onclick ="e()" style = "color: black;background-color: rgb(205, 211, 214);width: 57;height: 30;border-radius: 30%">
+            <input type="button" value ="6" id="6" onclick ="f()" style = "color: black;background-color: rgb(205, 211, 214);width: 57;height: 30;border-radius: 30%">
+            <input type="button" value ="+" id="+" onclick ="n()" style = "color: white;background-color: rgb(134, 120, 120);width: 57;height: 30;border-radius: 30%">
+        </th>
+      </tr>
+      <tr>
+        <th style="border: none">
+            <input type="button" value ="1" id="1" onclick ="a()" style = "color: black;background-color: rgb(205, 211, 214);width: 57;height: 30;border-radius: 30%">
+            <input type="button" value ="2" id="2" onclick ="b()" style = "color: black;background-color: rgb(205, 211, 214);width: 57;height: 30;border-radius: 30%">
+            <input type="button" value ="3" id="3" onclick ="c()" style = "color: black;background-color: rgb(205, 211, 214);width: 57;height: 30;border-radius: 30%">
+            <input type="button" value ="√" id="√" onclick ="root()" style = "color: white;background-color: rgb(134, 120, 120);width: 57;height: 30;border-radius: 30%">
+        </th>
+      </tr>
+      <tr>
+        <th style="border: none">
+            <input type="button" value ="." id="." onclick ="l()" style = "color: black;background-color: rgb(205, 211, 214);width: 57;height: 30;border-radius: 30%">  
+            <input type="button" value ="0" id="0" onclick ="j()" style = "color: black;background-color: rgb(205, 211, 214);width: 57;height: 30;border-radius: 30%">
+            <input type="button" value ="%" id="%" onclick ="o()" style = "color: white;background-color: rgb(134, 120, 120);width: 57;height: 30;border-radius: 30%">
+            <input type="button" value ="=" id="=" onclick ="q()" style = "color: white;background-color: rgb(180, 49, 44);width: 57;height: 30;border-radius: 30%">
+        </th>
+      </tr>
+    </table>
+  </center>
+  </body>
+
+      <script>
+
+        var count = 1;
+
+        function C(){
+        document.getElementById("input").value="";
+        count = 1;}
+        function g(){
+        document.getElementById("input").value= document.getElementById("input").value+"7";}
+        function h(){
+        document.getElementById("input").value= document.getElementById("input").value+"8";}
+        function i(){
+        document.getElementById("input").value= document.getElementById("input").value+"9";}
+        function d(){
+        document.getElementById("input").value= document.getElementById("input").value+"4";}
+        function e(){
+        document.getElementById("input").value= document.getElementById("input").value+"5";}
+        function f(){
+        document.getElementById("input").value= document.getElementById("input").value+"6";}
+        function a(){
+        document.getElementById("input").value= document.getElementById("input").value+"1";}
+        function b(){
+        document.getElementById("input").value= document.getElementById("input").value+"2";}
+        function c(){
+        document.getElementById("input").value= document.getElementById("input").value+"3";}
+        function j(){
+        document.getElementById("input").value= document.getElementById("input").value+"0";}
+        function k()
+        {
+          if(count == 1){
+            document.getElementById("input").value += "/";
+            count++;
+          }
+          else {
+            q();
+            document.getElementById("input").value += "/";
+            count++;
+          } 
+        }
+
+        function x()
+        {
+          if(count == 1){
+            document.getElementById("input").value += "x";
+            count++;
+          }
+          else {
+            q();
+            document.getElementById("input").value += "x";
+            count++;
+          }
+        }
+
+        function m()
+        {
+          if(count == 1){
+            document.getElementById("input").value += "-";
+            count++;
+          }
+          else {
+            q();
+            document.getElementById("input").value += "-";
+            count++;
+          }
+        }
+
+        function n()
+        {
+          if(count == 1){
+            document.getElementById("input").value += "+";
+            count++;
+          }
+          else {
+            q();
+            document.getElementById("input").value += "+";
+            count++;
+          }
+        }
+
+        function o()
+        {
+          if(count == 1){
+            document.getElementById("input").value += "%";
+            count++;
+          }
+          else {
+            q();
+            document.getElementById("input").value += "%";
+            count++;
+          }
+        }
+
+        function l(){
+        document.getElementById("input").value= document.getElementById("input").value+".";}
+        
+        function p()
+        {
+          var data = document.getElementById("input").value,r = "";
+          var i;
+          for(i = 0;i<data.length-1;i++){
+            r += data.charAt(i);
+
+          }
+          document.getElementById("input").value = r;
+          if(data.charAt(i)=="/"||data.charAt(i)=="+"||data.charAt(i)=="-"||data.charAt(i)=="x"||data.charAt(i)=="%")count = 1;
+        }
+
+        function root()
+        {
+          if(count == 1){
+            document.getElementById("input").value = Math.sqrt(document.getElementById("input").value);
+            count++;
+          }
+          else {
+            q();
+            document.getElementById("input").value = Math.sqrt(document.getElementById("input").value);
+          }
+        }
+
+        function q()
+        {
+          var i ,data = document.getElementById("input").value,r1,r2 = "";
+          
+          if(data.charAt(0)=="-")
+          {
+            r1 = "-" ;
+            i = 1; 
+            while((data.charAt(i) != '+')&&(data.charAt(i) != '-')&&(data.charAt(i) != "/")&&(data.charAt(i) != 'x')&&(data.charAt(i) != '%')&&(i!=data.length))
+          {
+            r1 += data.charAt(i);
+            i++;
+          }
+          for(var j = i+1;j<data.length;j++){
+            r2 += data.charAt(j);
+          }
+          }
+
+          else {
+            r1 = "";
+            i = 0 ;
+            while((data.charAt(i) != '+')&&(data.charAt(i) != '-')&&(data.charAt(i) != "/")&&(data.charAt(i) != 'x')&&(data.charAt(i) != '%')&&(i!=data.length)&&(data.length!=0))
+            {
+              r1 += data.charAt(i);
+              i++;
+            }
+            for(var j = i+1;j<data.length;j++){
+              r2 += data.charAt(j);
+            }
+          }
+            if(r2=="")
+            {
+              var result;
+              if((r1=="-")||(r1==""&&r2==""))result = 0;
+              else result = Number(r1);
+              document.getElementById("input").value = result;
+            }
+            else {
+              if(data.charAt(i)=="+")
+            {
+              var result = Number(r1) + Number(r2);
+              document.getElementById("input").value = result;
+            }
+            if(data.charAt(i)=="-")
+            {
+              var result = Number(r1) - Number(r2);
+              document.getElementById("input").value = result;
+            }
+            if(data.charAt(i)=="/")
+            {
+              var result = Number(r1) / Number(r2);
+              document.getElementById("input").value = result;
+            }
+            if(data.charAt(i)=="x")
+            {
+              var result = Number(r1) * Number(r2);
+              document.getElementById("input").value = result;
+            }
+            if(data.charAt(i)=="%")
+            {
+              var result = Number(r1) * (Number(r2)/100);
+              document.getElementById("input").value = result;
+            }
+            }
+            count = 1;
+          }
+      </script>
+</html>
