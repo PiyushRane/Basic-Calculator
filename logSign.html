@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Login Page</title>
+        <script src="logSign.js"></script>
+    </head>
+    <body>
+        <div>
+            <form class="login-form" style="display: none">
+                <input type="text" placeholder="Username"><br>
+                <input type="password" placeholder="Password"><br>
+                <button>Login</button><br>
+                <p>New User? <span onclick="signup()">Sign Up</span></p>
+            </form>
+        </div>
+        <div>
+            <form class="signup-form">
+                <input type="text" placeholder="Employee Name"/><br>
+                <input type="text" placeholder="Employement Id"/><br>
+                <input type="text" placeholder="Mobile Number" maxlength="10"/><br>
+                <input type="password" placeholder="Password" id = "check"><input type="checkbox" title="Show" onclick="revert()"><br>
+                <input type="password" placeholder="Conform-Password" id = "check2"><input type="checkbox" title="Show" onclick="revert2()"><br>
+                <button>Sign Up</button>
+                <p>Already Registered? <span onclick="login()">Login In</span></p>
+            </form>
+        </div>
+    </body>
+</html>
